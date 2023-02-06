@@ -21,4 +21,23 @@ const handleSearch=async(place)=>{
         return
     }
 
+    // Set Variable to Request for search place API
+    const placeSearchResult =await handleGetLongLat(place)
+
+    // Validate if place was found
+    if(placeSearchResult == undefined){
+        alert("Corresponding place search was not found")
+        return
+    }
+
+    // Set Variable for forecast result based on longitude and latitude
+    const result = await handleGetForecast(placeSearchResult.lon, placeSearchResult.lat)
+
+    // Conditional to alert user if forecast is unavailable for a given loaction
+    if(result == undefined){
+        alert("No forecast available for City entered")
+        return
+    }
+
+
 }
