@@ -143,3 +143,11 @@ const renderHistory=()=>{
     })
 }
 
+//Event listeners to handle 
+searchBtn.addEventListener("click", ()=>{
+    const place = searchInput?.value
+    handleSearch(place)
+})
+
+// Call the function
+renderHistory()
