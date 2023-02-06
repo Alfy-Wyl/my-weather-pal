@@ -100,7 +100,7 @@ const renderHtml=(current, forecast)=>{
 
 // Setting weather forecast details present day
 const renderCurrenttForeCurrent = (current)=>{
-    todayLocationName.innerHTML = `<p>${current.name} <span>(${new Date().getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()})</span> <span><img src="https://openweathermap.org/img/w/${current.weather?.[0]?.icon}.png" /></span></p>`
+    todayLocationName.innerHTML = `<p class="current">${current.name} <span>(${new Date().getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()})</span> <span><img src="https://openweathermap.org/img/w/${current.weather?.[0]?.icon}.png" /></span></p>`
     todayTemp.innerText=`Temp: ${current.main.temp} °C`
     todayHumidity.innerText=`Humidity: ${current.main.humidity} %`
     todayWind.innerText=`Wind: ${current.wind.speed} KPH`
@@ -111,11 +111,11 @@ const renderForecast=(forecast)=>{
     forecastContainer.innerHTML = ""
     forecast?.forEach(item=>{
         forecastContainer.innerHTML+= `
-        <div>
-            <p>${new Date(item.dt_txt).getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()}  <span><img src="https://openweathermap.org/img/w/${item.weather?.[0]?.icon}.png" /></span></p>
-            <p>Temp: ${item.main.temp} °C</p>
-            <p>Wind: ${item.wind.speed} KPH</p>
-            <p>Humidity: ${item.main.humidity} %</p>
+        <div class="forecast">
+            <p class="future-date">${new Date(item.dt_txt).getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()}  <span><img src="https://openweathermap.org/img/w/${item.weather?.[0]?.icon}.png" /></span></p>
+            <p class="forecast-result">Temp: ${item.main.temp} °C</p>
+            <p class="forecast-result">Wind: ${item.wind.speed} KPH</p>
+            <p class="forecast-result">Humidity: ${item.main.humidity} %</p>
           </div>
         
         `
