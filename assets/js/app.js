@@ -91,3 +91,18 @@ const handleGetForecast=async(long, lat)=>{
 }
 
 
+const renderHtml=(current, forecast)=>{
+
+    renderCurrenttForeCurrent(current)
+    renderForecast(forecast)
+
+}
+
+// Setting weather forecast details present day
+const renderCurrenttForeCurrent = (current)=>{
+    todayLocationName.innerHTML = `<p>${current.name} <span>(${new Date().getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()})</span> <span><img src="https://openweathermap.org/img/w/${current.weather?.[0]?.icon}.png" /></span></p>`
+    todayTemp.innerText=`Temp: ${current.main.temp} °C`
+    todayHumidity.innerText=`Humidity: ${current.main.humidity} %`
+    todayWind.innerText=`Wind: ${current.wind.speed} KPH`
+}
+
