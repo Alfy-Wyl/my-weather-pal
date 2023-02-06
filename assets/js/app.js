@@ -40,4 +40,14 @@ const handleSearch=async(place)=>{
     }
 
 
+    // Getting present and future forecasts for a city
+    const {forecastResult,todayForecastResult} = result
+
+    // Variable to display 5-day forecast starting at 6:00:00 each day. 
+    // There was an option to create a For Loop to get this data but seemed quite simple :)
+    const fiveDaysForecast= [forecastResult?.list?.[2], forecastResult?.list?.[10], forecastResult?.list?.[18], forecastResult?.list?.[26], forecastResult?.list?.[34]]
+
+    renderHtml(todayForecastResult, fiveDaysForecast)
+
+
 }
