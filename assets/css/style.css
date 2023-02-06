@@ -1,0 +1,44 @@
+.weather-header {
+    background-color: rgba(9, 98, 149, 0.777);
+}
+
+.btn {
+   margin: 5px;
+   background-color: rgba(9, 98, 149, 0.777);
+}
+
+#today {
+    background-color: white;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    
+}
+
+.history-btn {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(177, 171, 171);
+}
+
+.current {
+    font-size: 30px;
+}
+
+.forecast {
+    background-color: rgb(118, 112, 112);
+    margin: 28px;
+    padding: 10px;
+    border: 2px solid black;
+    text-decoration-color: white;
+    
+}
+
+.future-date {
+    font-size: 18px;
+    color: white;
+}
+
+.forecast-result {
+    color: white;
+}
