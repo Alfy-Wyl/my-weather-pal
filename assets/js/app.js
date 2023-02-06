@@ -122,3 +122,24 @@ const renderForecast=(forecast)=>{
     })
 }
 
+// Function to append search history
+const renderHistory=()=>{
+    historyContainer.innerHTML=""
+
+    historyList.forEach(history=>{
+
+        historyContainer.innerHTML+= `<button class="history-btn">
+            ${history}
+        </button>`
+    })
+
+    const historybtns = document.querySelectorAll(".history-btn")
+
+    // Function to allow appended history result display forecast when clicked
+    historybtns.forEach(btn=>{
+        btn.addEventListener("click",()=>{
+            handleSearch(btn.textContent?.trim())
+        })
+    })
+}
+
