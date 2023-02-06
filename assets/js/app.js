@@ -64,3 +64,30 @@ const handleGetLongLat=async(place)=>{
      // Return undefined to signal error or no search found
     return undefined
 }
+
+// Setting up API for coordinates
+const handleGetForecast=async(long, lat)=>{
+    // Request to get todays forecast
+    const todayRequest = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`)
+    // Request to weather forecast api
+    const request = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`)
+    
+    if(request.ok && todayRequest.ok){
+        const forecastResult =  await request.json()
+        const todayForecastResult = await todayRequest.json()
+
+        if(!historyList.includes(todayForecastResult.name?.toLowerCase())){
+
+            historyList.push(todayForecastResult.name?.toLowerCase())
+            console.log("renderHistory:",historyList);
+            localStorage.setItem("locations",JSON.stringify (historyList))
+            renderHistory()
+        }
+
+        return {forecastResult, todayForecastResult}
+    }
+
+    return undefined
+}
+
+
