@@ -38,6 +38,7 @@ MIT License. See link for details
 
 ## Link
 
+https://alfy-wyl.github.io/my-weather-pal/
 
 
 ## Screenshot
