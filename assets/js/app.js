@@ -106,3 +106,19 @@ const renderCurrenttForeCurrent = (current)=>{
     todayWind.innerText=`Wind: ${current.wind.speed} KPH`
 }
 
+// Setting weather forecast details for 5-day forecast
+const renderForecast=(forecast)=>{
+    forecastContainer.innerHTML = ""
+    forecast?.forEach(item=>{
+        forecastContainer.innerHTML+= `
+        <div>
+            <p>${new Date(item.dt_txt).getUTCDate()}/${new Date().getUTCMonth()+1}/${new Date().getFullYear()}  <span><img src="https://openweathermap.org/img/w/${item.weather?.[0]?.icon}.png" /></span></p>
+            <p>Temp: ${item.main.temp} °C</p>
+            <p>Wind: ${item.wind.speed} KPH</p>
+            <p>Humidity: ${item.main.humidity} %</p>
+          </div>
+        
+        `
+    })
+}
+
