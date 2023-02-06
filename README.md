@@ -3,6 +3,10 @@ An app that allows users to see the weather forecast for cities of their choosin
 
 ## Description
 
+To create an app that allows travelers to see the weather outlook for multiple cities in order to plan a trip accordingly.
+The project featured using OpenWeatherMap API to generate weather imformation for various cities.
+
+
 
 ## Usage
 
@@ -25,3 +29,15 @@ The humidity
 When a user clicks on a city in the search history they are again presented with current and future conditions for that city.
 
 When a user clicks on the search button without any input in the text area, an alert is displayed to enter a city name before clicking search.
+
+
+## License
+
+MIT License. See link for details
+
+
+## Link
+
+
+
+## Screenshot
