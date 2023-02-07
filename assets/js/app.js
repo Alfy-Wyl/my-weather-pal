@@ -54,7 +54,7 @@ const handleSearch=async(place)=>{
 
 // Setting up API link to get weather report for a given city entered by user
 const handleGetLongLat=async(place)=>{
-    const request = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=20&appid=4a6540b6c5fcfc38ab3cc789481f4a55`,{
+    const request = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=20&appid=4a6540b6c5fcfc38ab3cc789481f4a55`,{
         headers:{
             "content-type":"application/json"
         }
