@@ -54,7 +54,7 @@ const handleSearch=async(place)=>{
 
 // Setting up API link to get weather report for a given city entered by user
 const handleGetLongLat=async(place)=>{
-    const request = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=20&appid=4a6540b6c5fcfc38ab3cc789481f4a55`,{
+    const request = await fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=20&appid=4a6540b6c5fcfc38ab3cc789481f4a55`,{
         headers:{
             "content-type":"application/json"
         }
@@ -72,13 +72,13 @@ const handleGetLongLat=async(place)=>{
 // Setting up API for coordinates
 const handleGetForecast=async(long, lat)=>{
     // Request to get todays forecast
-    const todayRequest = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`,{
+    const todayRequest = await fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`,{
         headers:{
             "content-type":"application/json"
         }
     })
     // Request to weather forecast api
-    const request = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`,{
+    const request = await fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=4a6540b6c5fcfc38ab3cc789481f4a55&units=metric`,{
         headers:{
             "content-type":"application/json"
         }
