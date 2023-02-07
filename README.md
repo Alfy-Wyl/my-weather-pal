@@ -42,3 +42,6 @@ https://alfy-wyl.github.io/my-weather-pal/
 
 
 ## Screenshot
+
+<img width="1438" alt="Screenshot 2023-02-07 at 00 03 24" src="https://user-images.githubusercontent.com/118228946/217114664-8b16e22e-ff60-4f7d-8acd-acf968090cb7.png">
+
